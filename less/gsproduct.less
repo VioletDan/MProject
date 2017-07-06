@@ -1,0 +1,149 @@
+@import "px2rem";     // 导入换算 less
+@import "variable";
+@top-color:#f1f1f1;
+.gs-product{
+    .list{
+        .hd {
+            position: relative;
+            height: 76*@rem;
+            display: -webkit-box;
+            .filter{
+                width: 100%;
+                overflow: hidden;
+                border-bottom: 2*@rem solid #dadada;
+                padding: 0 40*@rem;
+                ul{
+                    width: 100%;
+                    >li{
+                        float: left;
+                        line-height: 72*@rem;
+                        width: 33%;
+                        position: relative;
+                        box-sizing: border-box;
+                        >a{
+                            color: #000;                        
+                            position: relative;
+                            width: 100%;
+                            .font-size(16);
+                            text-align: center;
+                            >i{
+                                display: inline-block;
+                                width: 48*@rem;
+                                height: 48*@rem;
+                                vertical-align: middle;
+                                background-image: url('../images/arrow-up.svg');
+                                background-repeat: no-repeat;                                
+                                background-size: 44*@rem 44*@rem;
+                                background-position: center center;
+                            }
+                        }
+                    }
+                }
+            }
+            .searchbtn{
+                width: 72*@rem;
+                border-bottom: 2*@rem solid #ccc;
+                background: #fff;
+                >.icon-search{
+                    width: 80*@rem;
+                    height: 72*@rem;
+                }
+            }
+            .popbox{
+                width: 100%;
+                background-color: #ffffff;
+                position: absolute;
+                left: 0px;
+                top: 76*@rem;
+                box-shadow: 0px 6*@rem 12*@rem #dddddd;
+                display: none;
+                ul{
+                    li{
+                        border-bottom: 1px solid #dadada;
+                        border-width: 0 0 1px 0;
+                        border-image: url('../images/dot.gif');
+                        position: relative;
+                        >a{
+                            display: block;
+                            line-height: 80*@rem;
+                            padding: 0px 20*@rem;
+                            color: #000;
+                            .font-size(16);
+                        }
+                    }
+                    .on:after{
+                            content: "";
+                            display: block;
+                            width: 40*@rem;
+                            height: 40*@rem;
+                            background-image: url('../images/gou.svg');
+                            background-repeat: no-repeat;
+                            background-size: 40*@rem auto;
+                            position: absolute;
+                            right: 30*@rem;
+                            top: 50%;
+                            margin-top: -20*@rem;
+                    }
+
+
+                }
+            }
+            .on{
+                display: block;
+                z-index: 10;
+            }
+        }
+        .bd{
+            background-color: #f1f1f1;
+            padding: 12*@rem 0px;
+            >ul{
+                height: 0px;
+                position: relative;
+               >li{
+                   >a{
+                        display: block;
+                        margin: 8*@rem;
+                        background: #fff;
+                        >.pic{
+                            width: 100%;
+                            height: auto;
+                            text-align: center;
+                            overflow: hidden;
+                            >img{
+                                width: 100%;
+                            }
+                        }
+                        >.title{
+                            color: #333333;
+                            word-break: break-all;
+                            padding: 0 12*@rem;
+                            height: 24*@rem;
+                            overflow: hidden;
+                            .font-size(12);
+                            line-height: 24*@rem;
+                            font-weight: normal;
+                            text-align: left;
+                            margin-top: 12*@rem;
+                        }
+                        >.other{
+                            padding:12*@rem 12*@rem;
+                            >.price{
+                                color: #f8601d;
+                                .font-size(20);
+                            }
+                            >.btn{
+                                float: right;
+                                .font-size(14);
+                                color: #FFFFFF;
+                                border-radius: 6*@rem;
+                                background-color: #ff9501;
+                                padding: 8*@rem 20*@rem;                              
+                              
+                            }
+                        }
+                   }
+               } 
+            }
+        }
+    }
+}

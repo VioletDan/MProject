@@ -1,0 +1,39 @@
+@import "px2rem";     // 导入换算 less
+@import "variable";
+@top-color:#f1f1f1;
+.cu-content{
+    h4{
+        color: #ff6c00;
+        display: block;
+        .font-size(15);
+    }
+    .content{
+        margin-bottom: 250*@rem;
+        .conn{
+            .pic{
+                width: 300*@rem;
+                margin-right: 20*@rem;
+                img{
+                    width: 100%;
+                    float: right;
+                }
+            }
+            // height: 400*@rem;
+            padding-bottom: 20*@rem;
+            word-break: break-all;
+            p{
+                word-break: break-all;
+            }
+            .txt2{
+                margin: 0;
+                padding: 0;
+                width: 350*@rem;
+                text-align: left;
+                img{
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+}

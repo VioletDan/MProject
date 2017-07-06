@@ -1,0 +1,30 @@
+@import "px2rem";     // 导入换算 less
+@import "variable";
+@top-color:#f1f1f1;
+.foot{
+    padding-top: 0;
+    margin-top: 50*@rem;
+}
+.link{
+    width: 600*@rem;
+    margin: 20*@rem auto;
+    >a{
+        //width: 300*@rem;
+        height: 100*@rem;
+        line-height: 100*@rem;
+        text-align: center;
+        color: #000;
+        .font-size(16);
+        padding: 0 16*@rem;
+        background: #f4f4f4;
+        border: 2*@rem solid #bfbfbf;
+        margin: 0 0 10*@rem 10*@rem;
+        box-sizing: border-box;
+        >img{
+            margin-right: 10*@rem;
+            width: 32*@rem;
+            height: 32*@rem;
+            vertical-align: middle;
+        }
+    }
+}

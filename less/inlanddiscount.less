@@ -1,0 +1,57 @@
+@import "px2rem";     // 导入换算 less
+@import "variable";
+@top-color:#f1f1f1;
+//头部在公共区域
+.inland-discount-list{
+    >ul{
+        >li{
+            text-align: center;
+            padding: 20*@rem;
+            border: 1px solid #eeeeee;
+            border-top-width: 0;
+            overflow: hidden;
+            >a{
+                display: block;
+                >.img{
+                    margin: 20*@rem auto;
+                    width: 280*@rem;
+                    height: 280*@rem;
+                    overflow: hidden;
+                    word-break: break-all;
+                    img{
+                        width: 100%;
+                    }
+                }
+                >.title{
+                    .font-size(14);
+                    color: #333;
+                    text-align: left;
+                    font-weight: bold;
+                    word-break: break-all;
+                    overflow: hidden;
+                    height: 72*@rem;
+                }
+                >.subtit{
+                    .font-size(14);
+                    color: #ff6c00;
+                    text-align: left;
+                    height: 47*@rem;
+                    line-height: 47*@rem;
+                    overflow: hidden;
+                    margin-top: 8*@rem;
+                }
+                >.info{
+                    color: #a1a1a1;
+                    text-align: left;
+                    .font-size(12);
+                    margin: 15*@rem 0;
+                }
+            }
+        }
+    }
+}
+//底部
+.foot{
+    padding-top: 0;
+    margin-top: 50*@rem;
+}

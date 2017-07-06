@@ -1,0 +1,87 @@
+.mmb-h {
+  background: #f4483e;
+}
+.foot {
+  padding-top: 0;
+  margin-top: 0.66665rem;
+}
+main > .tips {
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+  margin: 0.213328rem 0px;
+}
+[data-dpr='2'] main > .tips {
+  font-size: 24px;
+}
+[data-dpr="3"] main > .tips {
+  font-size: 36px;
+}
+.coupon-list ul li {
+  border-bottom: 0.026666rem solid #e7e7e7;
+  background-image: url(../images/arrow1.svg);
+  background-repeat: no-repeat;
+  background-size: 0.53332rem 0.53332rem;
+  background-position: right center;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+.coupon-list ul li a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 0.26666rem;
+  box-sizing: content-box;
+  color: #333;
+}
+.coupon-list ul li a .pic {
+  width: 2.6666rem;
+  height: 2.13328rem;
+  overflow: hidden;
+  margin-right: 0.26666rem;
+  float: left;
+}
+.coupon-list ul li a .pic img {
+  max-width: 2.6666rem;
+}
+.coupon-list ul li a .info {
+  padding-right: 0.79998rem;
+  overflow: hidden;
+}
+.coupon-list ul li a .info .tit h3 {
+  word-break: break-all;
+  text-align: justify;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333333;
+  line-height: 0.53332rem;
+}
+[data-dpr='2'] .coupon-list ul li a .info .tit h3 {
+  font-size: 28px;
+}
+[data-dpr="3"] .coupon-list ul li a .info .tit h3 {
+  font-size: 42px;
+}
+.coupon-list ul li a .info .tit h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000002;
+}
+[data-dpr='2'] .coupon-list ul li a .info .tit h2 {
+  font-size: 28px;
+}
+[data-dpr="3"] .coupon-list ul li a .info .tit h2 {
+  font-size: 42px;
+}
+.coupon-list ul li a .info .time {
+  font-size: 12px;
+  color: #EE7700;
+  margin-top: 0.26666rem;
+}
+[data-dpr='2'] .coupon-list ul li a .info .time {
+  font-size: 24px;
+}
+[data-dpr="3"] .coupon-list ul li a .info .time {
+  font-size: 36px;
+}

@@ -1,0 +1,38 @@
+.cu-content h4 {
+  color: #ff6c00;
+  display: block;
+  font-size: 15px;
+}
+[data-dpr='2'] .cu-content h4 {
+  font-size: 30px;
+}
+[data-dpr="3"] .cu-content h4 {
+  font-size: 45px;
+}
+.cu-content .content {
+  margin-bottom: 3.33325rem;
+}
+.cu-content .content .conn {
+  padding-bottom: 0.26666rem;
+  word-break: break-all;
+}
+.cu-content .content .conn .pic {
+  width: 3.9999rem;
+  margin-right: 0.26666rem;
+}
+.cu-content .content .conn .pic img {
+  width: 100%;
+  float: right;
+}
+.cu-content .content .conn p {
+  word-break: break-all;
+}
+.cu-content .content .conn .txt2 {
+  margin: 0;
+  padding: 0;
+  width: 4.66655rem;
+  text-align: left;
+}
+.cu-content .content .conn .txt2 img {
+  width: 100%;
+}

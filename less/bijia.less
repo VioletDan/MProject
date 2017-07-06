@@ -1,0 +1,154 @@
+@import "px2rem";     // 导入换算 less
+@import "variable";
+@top-color:#f1f1f1;
+.product-bijia{
+    position: relative;
+    >.product-name{
+        text-align: center;
+        .font-size(17);
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 32*@rem;
+        height: 350*@rem;
+        color: #000;
+    }
+    >.product-img{
+        width: 340*@rem;
+        //height: 204*@rem;宽度根据盒子自适应
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+    >.product-collect{
+        float: right;
+        margin-right: 48*@rem;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+}
+//tab
+.tab{
+    width: 100%;
+    margin-top: 40*@rem;
+    height: 63*@rem;
+    line-height: 63*@rem;
+    .font-size(15);
+    overflow: hidden;
+    z-index: 0;
+    background-color: #ffbb00;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+    background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+    background: -o-linear-gradient(top, #ffd050, #ffbb00);
+    border-top: solid 1px #c14d00;
+    border-bottom: 1px solid #c14d00;
+    >ul{
+        > li{
+            box-sizing: border-box;
+            float: left;
+            width: 33.33%;
+            height: 63*@rem;
+            text-align: center;
+            a{
+                color: #fff;
+                display: block;
+                height: 63*@rem;
+                width: 100%;
+            }
+        }
+        .cur{
+            background-color: #ffbb00;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+        }
+        .mtab {
+            border-left: solid 1px #c14d00;
+            border-right: solid 1px #c14d00;
+        }
+    }
+}
+.plist{
+    >.bijia>a{
+        .font-size(16);
+        color: #f00;
+        display: block;
+        line-height: 90*@rem;
+        border-bottom: 1px solid #ccc;
+        padding: 0 20*@rem;
+        >table>tbody{
+            tr{
+                span{
+                    display: inline-block;
+                    height: 46*@rem;
+                    width: 113*@rem;
+                    color: #fff;
+                }
+                .p_pic {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 1px solid #bbb;
+                    >a{
+                        display: block;
+                        margin-top: 14*@rem;
+                    }
+                }
+                .red{
+                    color: #d10311;
+                    text-align: right;
+                    padding-right: 30*@rem;
+                }
+            }
+        }
+    }
+    >.note{
+        .font-size(12);
+        color: #888;
+        padding: 16*@rem 20*@rem;
+        line-height: 36*@rem;
+    }
+}
+//评价
+.product-com-title{
+    border-top: 8*@rem solid #7a7a7a;
+    margin-top: 10*@rem;
+    >div{
+        color: #000;
+        height: 68*@rem;
+        line-height: 68*@rem;
+        text-align: center;
+        overflow: hidden;
+        background: #dbdbdb;
+        .font-size(14);
+        border-top: 1px solid #fff;
+    }
+}
+// 评价主要内容
+.product-com-list{
+        ul>li{
+            .font-size(12);
+            color: #666;
+            padding: 20*@rem;
+            line-height: 36*@rem;
+            margin-top: 6*@rem;
+            border-bottom: 1px solid #ccc;
+            >.com-content{
+                color: #000;
+                line-height: 44*@rem;
+                padding-top: 10*@rem;
+            }
+        }
+        .more>.morein{
+            display: block;
+            height: 64*@rem;
+            background-color: #d4d4d4;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+            border-bottom: 1px solid #bababa;
+            box-shadow: 0 0 1px #666;
+            border-radius: 10*@rem;
+            text-align: center;
+            .font-size(14);
+            line-height: 64*@rem;
+            overflow: hidden;
+            color: #000;
+        }
+}

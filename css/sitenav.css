@@ -1,0 +1,32 @@
+.foot {
+  padding-top: 0;
+  margin-top: 0.66665rem;
+}
+.link {
+  width: 7.9998rem;
+  margin: 0.26666rem auto;
+}
+.link > a {
+  height: 1.3333rem;
+  line-height: 1.3333rem;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  padding: 0 0.213328rem;
+  background: #f4f4f4;
+  border: 0.026666rem solid #bfbfbf;
+  margin: 0 0 0.13333rem 0.13333rem;
+  box-sizing: border-box;
+}
+[data-dpr='2'] .link > a {
+  font-size: 32px;
+}
+[data-dpr="3"] .link > a {
+  font-size: 48px;
+}
+.link > a > img {
+  margin-right: 0.13333rem;
+  width: 0.426656rem;
+  height: 0.426656rem;
+  vertical-align: middle;
+}

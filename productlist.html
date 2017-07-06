@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/productlist.css">
+    <title>productlist.html</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h">
+        <div class="h-logo f-left">
+            <a href="index.html" title="慢慢买">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center"></div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--搜索框区域-->
+    <section id="mmb-ser" class="mmb-ser">
+        <div class="mmb-ser-t">
+            <div class="ser-t-f">
+                <input type="text" class="search" placeholder="请输入您想比较的商品">
+            </div>
+            <div class="ser-t-r">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+    <!--具体商品列表-->
+    <section class="product-list" id="product-list">
+        <!--头部-->
+        <nav class="product-list-title clearfix">
+            <a href="index.html" class="list-title1">首页</a>
+            >
+            <a href="category.html" class="list-title2">全部分类</a>
+            >
+            <!--<a href="#" class="list-title3">电视</a>-->
+            <a href="#" class="select f-right">筛选</a>
+        </nav>
+        <!--内容-->
+        <div class="product-list">
+            <ul>
+                <!--<li class="ui-border-b">
+                    <a href="#" class="clearfix">
+                        <div class="pic f-left">
+                            <img src="images/Thumb_2016060015515937123.png" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                        </div>
+                        <div class="info">
+                            <div class="tit">
+                                乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+                            </div>
+                            <div class="price">
+                                <em>￥1999.00</em>
+                            </div>
+                            <div class="other">
+                                <em>报价(6)</em>
+                                <em>评论(2286)</em>
+                            </div>
+                        </div>
+                    </a>
+                </li>-->
+            </ul>
+            <div class="clearfix page">
+                <span class="w33">
+                    <a href="javascript:void(0)" class="prePage">
+                        上一页
+                    </a>
+                </span>
+                <span class="w33">
+                    <select name="select" id="selectPage" class="selectPage"></select>
+                </span>
+                <span class="w33">
+                    <a href="javascript:void(0)" class="nextPage">
+                        下一页
+                    </a>
+                </span>
+            </div>
+        </div>
+    </section>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="register.html" class="w30">登录</a>
+            <a href="login.html" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/productlist.js"></script>
+    <!--模板引擎1-->
+    <script type="text" id="tpl1">
+        {{each result as item index}}
+        <li class="ui-border-b">
+            <a href="bijia.html?productid={{item.productId}}" class="clearfix">
+                <div class="pic f-left">
+                    {{#item.productImg}}
+                </div>
+                <div class="info">
+                    <div class="tit" >
+                        {{item.productName}}
+                    </div>
+                    <div class="price">
+                        <em>{{item.productPrice}}</em>
+                    </div>
+                    <div class="other">
+                        <em>{{item.productQuote}}</em>
+                        <em>{{item.productCom}}</em>
+                    </div>
+                </div>
+            </a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text" id="tpl2">
+        {{each result as item index}}
+            <a href="#" class="list-title3">{{item.category}}</a>
+        {{/each}}
+    </script>
+    <script type="text" id="tpl3">
+        {{each result as item index}}
+            <option value="1" selected="selected">1/3</option>
+            <option value="2">2/3</option>
+            <option value="3">3/3</option>
+        {{/each}}
+    </script>
+    
+</body>
+</html>

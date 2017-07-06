@@ -1,0 +1,179 @@
+.product-bijia {
+  position: relative;
+}
+.product-bijia > .product-name {
+  text-align: center;
+  font-size: 17px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0.426656rem;
+  height: 4.66655rem;
+  color: #000;
+}
+[data-dpr='2'] .product-bijia > .product-name {
+  font-size: 34px;
+}
+[data-dpr="3"] .product-bijia > .product-name {
+  font-size: 51px;
+}
+.product-bijia > .product-img {
+  width: 4.53322rem;
+  margin: 0 auto;
+}
+.product-bijia > .product-img img {
+  width: 100%;
+}
+.product-bijia > .product-collect {
+  float: right;
+  margin-right: 0.639984rem;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.tab {
+  width: 100%;
+  margin-top: 0.53332rem;
+  height: 0.839979rem;
+  line-height: 0.839979rem;
+  font-size: 15px;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #ffbb00;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+  background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+  background: -o-linear-gradient(top, #ffd050, #ffbb00);
+  border-top: solid 1px #c14d00;
+  border-bottom: 1px solid #c14d00;
+}
+[data-dpr='2'] .tab {
+  font-size: 30px;
+}
+[data-dpr="3"] .tab {
+  font-size: 45px;
+}
+.tab > ul > li {
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+  height: 0.839979rem;
+  text-align: center;
+}
+.tab > ul > li a {
+  color: #fff;
+  display: block;
+  height: 0.839979rem;
+  width: 100%;
+}
+.tab > ul .cur {
+  background-color: #ffbb00;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+}
+.tab > ul .mtab {
+  border-left: solid 1px #c14d00;
+  border-right: solid 1px #c14d00;
+}
+.plist > .bijia > a {
+  font-size: 16px;
+  color: #f00;
+  display: block;
+  line-height: 1.19997rem;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0.26666rem;
+}
+[data-dpr='2'] .plist > .bijia > a {
+  font-size: 32px;
+}
+[data-dpr="3"] .plist > .bijia > a {
+  font-size: 48px;
+}
+.plist > .bijia > a > table > tbody tr span {
+  display: inline-block;
+  height: 0.613318rem;
+  width: 1.506629rem;
+  color: #fff;
+}
+.plist > .bijia > a > table > tbody tr .p_pic {
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+}
+.plist > .bijia > a > table > tbody tr .p_pic > a {
+  display: block;
+  margin-top: 0.186662rem;
+}
+.plist > .bijia > a > table > tbody tr .red {
+  color: #d10311;
+  text-align: right;
+  padding-right: 0.39999rem;
+}
+.plist > .note {
+  font-size: 12px;
+  color: #888;
+  padding: 0.213328rem 0.26666rem;
+  line-height: 0.479988rem;
+}
+[data-dpr='2'] .plist > .note {
+  font-size: 24px;
+}
+[data-dpr="3"] .plist > .note {
+  font-size: 36px;
+}
+.product-com-title {
+  border-top: 0.106664rem solid #7a7a7a;
+  margin-top: 0.13333rem;
+}
+.product-com-title > div {
+  color: #000;
+  height: 0.906644rem;
+  line-height: 0.906644rem;
+  text-align: center;
+  overflow: hidden;
+  background: #dbdbdb;
+  font-size: 14px;
+  border-top: 1px solid #fff;
+}
+[data-dpr='2'] .product-com-title > div {
+  font-size: 28px;
+}
+[data-dpr="3"] .product-com-title > div {
+  font-size: 42px;
+}
+.product-com-list ul > li {
+  font-size: 12px;
+  color: #666;
+  padding: 0.26666rem;
+  line-height: 0.479988rem;
+  margin-top: 0.079998rem;
+  border-bottom: 1px solid #ccc;
+}
+[data-dpr='2'] .product-com-list ul > li {
+  font-size: 24px;
+}
+[data-dpr="3"] .product-com-list ul > li {
+  font-size: 36px;
+}
+.product-com-list ul > li > .com-content {
+  color: #000;
+  line-height: 0.586652rem;
+  padding-top: 0.13333rem;
+}
+.product-com-list .more > .morein {
+  display: block;
+  height: 0.853312rem;
+  background-color: #d4d4d4;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  border-radius: 0.13333rem;
+  text-align: center;
+  font-size: 14px;
+  line-height: 0.853312rem;
+  overflow: hidden;
+  color: #000;
+}
+[data-dpr='2'] .product-com-list .more > .morein {
+  font-size: 28px;
+}
+[data-dpr="3"] .product-com-list .more > .morein {
+  font-size: 42px;
+}

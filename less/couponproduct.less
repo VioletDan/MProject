@@ -1,0 +1,74 @@
+@import "px2rem";     // 导入换算 less
+@import "variable";
+@top-color:#f1f1f1;
+.mmb-h{
+    background: #f4483e;
+}
+.foot{
+    padding-top: 0;
+    margin-top: 50*@rem;
+}
+main{
+    >.tips{
+        .font-size(12); 
+        text-align:center; 
+        color:#999; 
+        margin:16*@rem 0px;
+    }
+}
+.coupon-list{
+    ul{
+        li{
+            border-bottom: 2*@rem solid #e7e7e7;
+            background-image: url(../images/arrow1.svg);
+            background-repeat: no-repeat;
+            background-size: 40*@rem 40*@rem;
+            background-position: right center;
+            list-style: none;
+            position: relative;
+            overflow: hidden;
+            a{
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                padding: 20*@rem;
+                box-sizing: content-box;
+                color: #333;
+                .pic{
+                    width: 200*@rem;
+                    height: 160*@rem;
+                    overflow: hidden;
+                    margin-right: 20*@rem;
+                    float: left;
+                    img{
+                        max-width: 200*@rem;
+                    }
+                }
+                .info{
+                    padding-right: 60*@rem;
+                    overflow: hidden;
+                    .tit{
+                        h3{           
+                            word-break: break-all;
+                            text-align: justify;
+                            .font-size(14);
+                            font-weight: normal;
+                            color: #333333;
+                            line-height: 40*@rem;
+                        }
+                        h2{
+                            .font-size(14);
+                            font-weight: bold;
+                            color: #000002;
+                        }
+                    }
+                    .time{
+                        .font-size(12);
+                        color: #EE7700;
+                        margin-top: 20*@rem;
+                    }
+                }
+            }
+        }
+    }
+}

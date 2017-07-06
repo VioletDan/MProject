@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/gsproduct.css">
+    <title>gsproduct.html</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h clearfix">
+        <div class="back f-left">
+            <a href="index.html" class="icon-back" title="慢慢买"></a>
+        </div>
+        <div class="center"> 
+            <h1>凑单品</h1>
+        </div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--主体区域-->
+    <main class="gs-product">
+        <div class="list">
+            <div class="hd">
+                <div class="filter">
+                    <ul>
+                        <li>
+                            <a href="javascript:;"  class="shop" data-id='0'>
+                                京东
+                                <i></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"  class="area" data-id='0'>
+                                华北
+                                <i></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-id="0" class="price">
+                                全部价格
+                                <i></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--搜索框-->
+                <div class="searchbtn">
+                    <div class="icon-search"></div>
+                </div>
+                <!--下拉框-->
+                <div class="popsort  popbox " id="shop">
+                    <ul>
+                        <!--<li>
+                            <a href="#">京东</a>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="popcar  popbox" id="area">
+                    <ul>
+                        <!--<li class="on">
+                            <a href="#">京东</a>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="popprice  popbox" id="price">
+                    <ul>
+                        <li class="on">
+                            <a href="#">全部价格</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="bd gs-product-list clearfix">
+                <ul id="container" class="masonry">
+                    <!--<li class="w50 f-left">
+                        <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="clearfix">
+                            <div class="pic f-left">
+                                <img src="images/5461b6e1N70e46439.jpg" alt="">
+                            </div>
+                            <div class="title">廿一客(21cake)专用餐具 1人份(不单独配送)</div>
+                            <div class="other clearfix">
+                                <div class="price f-left">¥0.50</div>
+                                <div class="btn f-right">去凑单</div>
+                            </div>
+                        </a>
+                    </li>-->
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="register.html" class="w30">登录</a>
+            <a href="login.html" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/gsproduct.js"></script>
+    <!--模板引擎1 店铺-->
+    <script type="text" id="tpl1">
+        {{each result as item index}}
+            <li>
+                <a href="javascript:;" data-shopid="{{item.shopId}}">{{item.shopName}}</a>
+            </li>
+        {{/each}}
+    </script>
+    <!--模板引擎2 地区-->
+    <script type="text" id="tpl2">
+        {{each result as item index}}
+            <li>
+                <a href="javascript:;" data-areaid={{item.areaId}}>{{item.areaName}}</a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text" id="tpl3">
+        {{each result as item index}}
+            <li class="w50 f-left">
+                <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="clearfix">
+                    <div class="pic f-left">
+                        <img src="{{item.productImg}}" alt="">
+                    </div>
+                    <div class="title">{{item.productName}}</div>
+                    <div class="other clearfix">
+                        <div class="price f-left">{{item.productPrice}}</div>
+                        <div class="btn f-right">去凑单</div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+</body>
+</html>

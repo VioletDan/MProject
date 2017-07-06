@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/inlanddiscount.css">
+    <title>inlanddiscount.html</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h clearfix">
+        <div class="back f-left">
+            <a href="index.html" class="icon-back" title="慢慢买"></a>
+        </div>
+        <div class="center"> 
+            <h1>
+   			    国内折扣
+            </h1>
+        </div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--中间商品详情-->
+    <main class="recommen-product money-product" id="recommen-product">
+        <div class="inland-discount-list cu-friend">
+            <ul class="clearfix">
+                <!--<li class="border-img w50 f-left">
+                    <a href="discount.html?productid={{item.productId}}">
+                        <div class="img">
+                            <img src="images/55d2cf3eNc2d117d0.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            西域美农新疆特产五星和田红枣250g*2
+                        </div>
+                        <div class="subtit">
+                            19.8元(5件99元)
+                        </div>
+                        <div class="info">
+                            <span class="mall">京东商城 | 10-22 13:28</span>
+                        </div>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </main>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="register.html" class="w30">登录</a>
+            <a href="login.html" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/inlanddiscount.js"></script>
+    <!--模板引擎1-->
+    <script type="text" id="tpl1">
+        {{each result as item index}}
+            <li class="border-img w50 f-left">
+                    <a href="discount.html?productid={{item.productId}}">
+                        <div class="img">
+                            {{#item.productImg}}
+                        </div>
+                        <div class="title">
+                            {{item.productName}}
+                        </div>
+                        <div class="subtit">
+                            {{item.productPrice}}
+                        </div>
+                        <div class="info">
+                            <span class="mall">{{item.productFrom}} | {{item.productTime}}</span>
+                        </div>
+                    </a>
+                </li>
+        {{/each}}
+    </script>
+</body>
+</html>

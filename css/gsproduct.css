@@ -1,0 +1,165 @@
+.gs-product .list .hd {
+  position: relative;
+  height: 1.013308rem;
+  display: -webkit-box;
+}
+.gs-product .list .hd .filter {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 0.026666rem solid #dadada;
+  padding: 0 0.53332rem;
+}
+.gs-product .list .hd .filter ul {
+  width: 100%;
+}
+.gs-product .list .hd .filter ul > li {
+  float: left;
+  line-height: 0.959976rem;
+  width: 33%;
+  position: relative;
+  box-sizing: border-box;
+}
+.gs-product .list .hd .filter ul > li > a {
+  color: #000;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+[data-dpr='2'] .gs-product .list .hd .filter ul > li > a {
+  font-size: 32px;
+}
+[data-dpr="3"] .gs-product .list .hd .filter ul > li > a {
+  font-size: 48px;
+}
+.gs-product .list .hd .filter ul > li > a > i {
+  display: inline-block;
+  width: 0.639984rem;
+  height: 0.639984rem;
+  vertical-align: middle;
+  background-image: url('../images/arrow-up.svg');
+  background-repeat: no-repeat;
+  background-size: 0.586652rem 0.586652rem;
+  background-position: center center;
+}
+.gs-product .list .hd .searchbtn {
+  width: 0.959976rem;
+  border-bottom: 0.026666rem solid #cccccc;
+  background: #fff;
+}
+.gs-product .list .hd .searchbtn > .icon-search {
+  width: 1.06664rem;
+  height: 0.959976rem;
+}
+.gs-product .list .hd .popbox {
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0px;
+  top: 1.013308rem;
+  box-shadow: 0px 0.079998rem 0.159996rem #dddddd;
+  display: none;
+}
+.gs-product .list .hd .popbox ul li {
+  border-bottom: 1px solid #dadada;
+  border-width: 0 0 1px 0;
+  border-image: url('../images/dot.gif');
+  position: relative;
+}
+.gs-product .list .hd .popbox ul li > a {
+  display: block;
+  line-height: 1.06664rem;
+  padding: 0px 0.26666rem;
+  color: #000;
+  font-size: 16px;
+}
+[data-dpr='2'] .gs-product .list .hd .popbox ul li > a {
+  font-size: 32px;
+}
+[data-dpr="3"] .gs-product .list .hd .popbox ul li > a {
+  font-size: 48px;
+}
+.gs-product .list .hd .popbox ul .on:after {
+  content: "";
+  display: block;
+  width: 0.53332rem;
+  height: 0.53332rem;
+  background-image: url('../images/gou.svg');
+  background-repeat: no-repeat;
+  background-size: 0.53332rem auto;
+  position: absolute;
+  right: 0.39999rem;
+  top: 50%;
+  margin-top: -0.26666rem;
+}
+.gs-product .list .hd .on {
+  display: block;
+  z-index: 10;
+}
+.gs-product .list .bd {
+  background-color: #f1f1f1;
+  padding: 0.159996rem 0px;
+}
+.gs-product .list .bd > ul {
+  height: 0px;
+  position: relative;
+}
+.gs-product .list .bd > ul > li > a {
+  display: block;
+  margin: 0.106664rem;
+  background: #fff;
+}
+.gs-product .list .bd > ul > li > a > .pic {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+}
+.gs-product .list .bd > ul > li > a > .pic > img {
+  width: 100%;
+}
+.gs-product .list .bd > ul > li > a > .title {
+  color: #333333;
+  word-break: break-all;
+  padding: 0 0.159996rem;
+  height: 0.319992rem;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 0.319992rem;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 0.159996rem;
+}
+[data-dpr='2'] .gs-product .list .bd > ul > li > a > .title {
+  font-size: 24px;
+}
+[data-dpr="3"] .gs-product .list .bd > ul > li > a > .title {
+  font-size: 36px;
+}
+.gs-product .list .bd > ul > li > a > .other {
+  padding: 0.159996rem 0.159996rem;
+}
+.gs-product .list .bd > ul > li > a > .other > .price {
+  color: #f8601d;
+  font-size: 20px;
+}
+[data-dpr='2'] .gs-product .list .bd > ul > li > a > .other > .price {
+  font-size: 40px;
+}
+[data-dpr="3"] .gs-product .list .bd > ul > li > a > .other > .price {
+  font-size: 60px;
+}
+.gs-product .list .bd > ul > li > a > .other > .btn {
+  float: right;
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 0.079998rem;
+  background-color: #ff9501;
+  padding: 0.106664rem 0.26666rem;
+}
+[data-dpr='2'] .gs-product .list .bd > ul > li > a > .other > .btn {
+  font-size: 28px;
+}
+[data-dpr="3"] .gs-product .list .bd > ul > li > a > .other > .btn {
+  font-size: 42px;
+}

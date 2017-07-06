@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/moneyproduct.css">
+    <title>moneyproduct.html</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h clearfix">
+        <div class="back f-left">
+            <a href="moneyctrl.html" class="icon-back" title="慢慢买"></a>
+        </div>
+        <div class="center"> 
+            <h1>
+   			    国内折扣
+            </h1>
+        </div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--主要商品信息-->
+    <main class="recommen-product money-product" id="recommen-product">
+        <div class="container">
+            <div class="cu-content">
+                <!--<h1 class="title">
+                    移动端凑单品：海天 鲜味 生抽1.28L
+                </h1>
+                <div class="info">
+                    <span class="mall">京东商城  10-25 14:10</span>
+                    <span class="comment">小编烟火</span>
+                    /
+                    <span>慢慢买</span>
+                </div>
+                <div class="content clearfix">
+                    <div class="pic f-right">
+                        <img src="images/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                    </div>
+                    <div class="conn">
+                        <p>海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，
+                            而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，
+                            当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。
+                        </p>
+                        <p class="txt2">目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>
+                    </div>
+                    <div class="big-pic">
+                        <img src="images/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="drop">
+                        <ul id="disstorck">
+                            <li>
+                                <a href="javascript:;">
+                                    <span>
+                                        北京
+                                        <strong>有货</strong>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span class="clearfix">
+                                        北京
+                                        <strong>有货</strong>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>
+                                        北京
+                                        <strong>有货</strong>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+                <!--<div class="golink">
+                    <a href="#">
+                        前往购买
+                    </a>
+                </div>-->
+            </div>
+            <div class="cu-code">
+                <img src="images/mmbweixin2.png" alt="">
+            </div>
+            <!--<div class="cu-content-pl ui-border-t"> 
+                <div class="tit">
+                    发表评论
+                </div>
+                <div class="reply">
+                    <div class="form">
+                        <textarea name="" id="" cols="30" rows="3"></textarea>
+                        <div class="ctrl">
+                            <input type="sumbit" class="tjdp" value="发表评论">
+                        </div>
+                    </div>
+                </div>
+                <div class="tit" id="newcomment">最新评论</div>
+                <div class="list">
+                    <ul>
+                        <li class="ui-border-b">
+                            <div class="userimg">
+                                <img src="http://home.manmanbuy.com/upface/face/1466230634_162.jpg">
+                            </div>
+                            <div class="con">
+                                <div class="name clearfix">
+                                    <div class="username">赶鸭子上架</div> 
+                                    <div class="time">2016/10/25 14:18:45</div>
+                                </div>
+                                <div class="content">
+                                    比超市便宜了几块
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>   -->
+        </div>
+    </main>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="register.html" class="w30">登录</a>
+            <a href="login.html" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/moneyproduct.js"></script>
+    <!--模板引擎1-->
+    <script type="text" id="tpl1">
+        {{each result as item index}}
+            <h1 class="title">
+                    {{item.productName}}
+            </h1>
+            <div class="info">
+                <span class="mall">{{item.productFrom}}  {{item.productTime}}</span>
+                <span class="comment">{{item.productTips}}</span>
+            </div>
+            <div class="content clearfix">
+                <div class="pic f-right">
+                {{#item.productImgSm}}
+                </div>
+                <div class="conn">
+                    <p>{{item.productInfo2}}
+                    </p>
+                    <p class="txt2">{{item.productInfo1}}</p>
+                </div>
+                <div class="big-pic">
+                    {{#item.productImgLg}}
+                </div>
+            </div>
+            <div class="area">
+                <div class="drop">
+                    {{#item.productCity}}
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <!--模板引擎2-->
+    <script type="text" id="tpl2">
+        {{each result as item index}}
+            {{#item.productComment}}
+        {{/each}}
+    </script>
+</body>
+</html>

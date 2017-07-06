@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>慢慢买</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h">
+        <div class="h-logo f-left">
+            <a href="index.html" title="慢慢买">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center"></div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--搜索框区域-->
+    <section id="mmb-ser" class="mmb-ser">
+        <div class="mmb-ser-t">
+            <div class="ser-t-f">
+                <input type="text" class="search" placeholder="请输入您想比较的商品">
+            </div>
+            <div class="ser-t-r">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+    <!--主菜单区域-->
+    <section id="menu" class="menu">
+        <div class="row clearfix">
+            <!--<div class="menu-item w25">
+                <a href="#">
+                    <img src="images/ic_search.png" alt="比价搜索">
+                    <p>比价搜索</p>
+                </a>
+            </div>-->
+        </div>
+    </section>
+    <!--超值折扣推荐-->
+    <section id="recommen" class="recommen clearfix">
+        <div class="re-txt f-left">
+            <span style="color:#fff">超值折扣推荐</span>
+        </div>
+        <div class="center"></div>
+        <div class="re-arrow f-right">
+            <a href="javascript:;" title="更多">
+                <img src="images/more.png" alt="">
+            </a>
+        </div>
+    </section>
+    <!--主产品区域-->
+    <main class="recommen-product" id="recommen-product">
+        <div class="recommen-product-list product-list">
+            <ul>
+                <!--<li class="clearfix ui-border-b">
+                    <a href="#">
+                        <div class="pic f-left">
+                            <img src="images/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                移动端凑单品：海天 鲜味 生抽 <br>1.28L
+                                <span>10.9元</span>
+                            </div>
+                            <div class="other">
+                                <span class="mall">京东商城 | 10-25 14:10</span>
+                                <span class="comment f-right">
+                                    <i class="icon-comment"></i>1
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>-->
+            </ul>
+            <div class="more-bar">
+                <div class="more-txt">
+                    <a href="moneyctrl.html">更多优惠信息 »</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!--品牌排行-->
+    <section id="recommen" class="recommen clearfix">
+        <div class="re-txt f-left">
+            <span style="color:#fff">品牌排行</span>
+        </div>
+        <div class="center"></div>
+        <div class="re-arrow f-right">
+            <a href="javascript:;" title="更多">
+                <img src="images/more.png" alt="">
+            </a>
+        </div>
+    </section>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="login.html" class="w30">登录</a>
+            <a href="register.html" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/index.js"></script>
+    <!--模板引擎1-->
+    <script type="text" id="tpl1">
+        {{each result as item index}}
+        <div class="menu-item w25">
+                <a href="{{item.titlehref}}">
+                   {{#item.img}}
+                    <p>{{item.name}}</p>
+                </a>
+        </div>
+        {{/each}}
+    </script>
+    <!--模板引擎2-->
+    <script type="text" id="tpl2">
+        {{each result as item index}}
+        <li class="clearfix ui-border-b">
+                    <a href="#">
+                        <div class="pic f-left">
+                          {{#item.productImgSm}}
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                {{item.productName}}
+                                <span>{{item.productPinkage}}</span>
+                            </div>
+                            <div class="other clearfix">
+                                <span class="mall">{{item.productFrom}} | {{item.productTime}}</span>
+                                <span class="comment f-right">
+                                    <i class="icon-comment"></i>
+                                    <span id=number class=number>{{item.productComCount}}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+        {{/each}}
+    </script>
+    <script text/javascript>
+         // $.ajax()方法
+	    //      功能:发送一个ajax 请求
+	    //      参数1:请求url的地址
+	    //      参数2属性：
+        // url 接口地址
+        // type 请求方式
+        // timeout 请求超时
+        // dataType 服务器返回格式
+        // data 发送请求数据
+        // beforeSend: function () {} 请求发起前调用
+        // success 成功响应后调用
+        // error 错误响应时调用
+        // complete 响应完成时调用（包括成功和失败）
+         //192.168.39.80
+        // */
+        // $.ajax({
+        //     type:"post",
+        //     url:"01.$ajax_post.php",
+        //     async:true,
+        //     timeout:3000,
+        //     dataType:'json',//小写的json字符串
+        //     data:{
+        //         name:'jack',
+        //         age:18
+        //     },
+        //     beforeSend:function(){
+        //         console.log('开始发送');
+        //     },
+        //     success:function(data){
+        //         console.log(data);
+        //         $('#container').html(data.age + data.name);
+        //     },
+        //     error:function(){
+        //         console.log('请求出错');
+        //     },
+        //     complete:function(){
+        //         console.log('完成了');
+        //     }
+		// });
+    </script>
+    
+</body>
+</html>

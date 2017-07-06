@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/couponproduct.css">
+    <title>couponproduct.html</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h clearfix">
+        <div class="back f-left">
+            <a href="index.html" class="icon-back" title="慢慢买"></a>
+        </div>
+        <div class="center"> 
+            <h1>    			    						   			
+			肯德基优惠券
+            </h1>
+        </div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--main的内容区域-->
+    <main>
+        <div class="tips">           
+            <span>--点餐前出示手机中的优惠券，即可享受优惠--</span>
+        </div>
+        <div class="coupon-list">
+            <ul class="clearfix">
+                <!--<li>
+                    <a href="#">
+                        <div class="pic">
+                            <img src="images/kfc-5ikfc-108_pc27.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="tit">
+                                <h3>C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</h3>
+                                <h2>￥ 28</h2>
+                            </div>
+                            <div class="time">
+                                有效期至10月31日
+                            </div>
+                        </div>
+                    </a>
+                </li>-->
+            </ul>
+            <!--返回顶部箭头-->
+            <a class="gotop" id="gotop" href="javsscript:;" style="display: inline-block;"></a>
+        </div>
+    </main>
+    <!--遮罩层-->
+    <section class="modal">
+        <div class="mmb-modal clearfix">
+            <a href='javascript:;' class="l f-left">&lt;</a>
+            <a href='javascript:;' class="r f-right">&lt;</a>
+            <div class="pic" data-index="0">
+                <!--<img src="images/kfc-5ikfc-108_pc27.jpg" alt="">-->
+            </div>
+            <div class="cannel f-right">X</div>
+        </div> 
+    </section>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="#" class="w30">登录</a>
+            <a href="#" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+     <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/couponproduct.js"></script>    
+    <!--模板引擎1-->                   
+    <script type="text" id="tpl1">
+        {{each result as item index}}
+            <li data-couponProductid={{item.couponProductId}}>
+                <a href="javascript:;">
+                    <div class="pic">
+                        {{#item.couponProductImg}}
+                    </div>
+                    <div class="info">
+                        <div class="tit">
+                            <h3>{{item.couponProductName}}</h3>
+                            <h2>{{item.couponProductPrice}}</h2>
+                        </div>
+                        <div class="time">
+                            {{item.couponProductTime}}
+                        </div>
+                    </div>
+                </a>
+                </li>
+        {{/each}}
+    </script>
+    <!--模板引擎2-->                   
+    <script type="text" id="tpl2">
+        {{each result as item index}}
+           {{#item.couponProductImg}}
+        {{/each}}
+    </script>
+</body>
+</html>

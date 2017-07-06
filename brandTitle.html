@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/brandTitle.css">
+    <title>brandTitle.html</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h">
+        <div class="h-logo f-left">
+            <a href="index.html" title="慢慢买">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center"></div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--搜索框区域-->
+    <section id="mmb-ser" class="mmb-ser">
+        <div class="mmb-ser-t">
+            <div class="ser-t-f">
+                <input type="text" class="search" placeholder="请输入您想比较的商品">
+            </div>
+            <div class="ser-t-r">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+    <!--具体商品列表-->
+    <section class="product-list" id="product-list">
+        <!--头部-->
+        <nav class="product-list-title clearfix">
+            <a href="index.html" class="list-title1">首页</a>
+            >
+            <a href="category.html" class="list-title2">全部分类</a>
+            >
+            <!--<a href="#" class="list-title3">电视</a>-->
+        </nav>
+        <div class="brand">热门品牌排行</div>
+        <!--内容-->
+        <div class="row clearfix">
+            <ul class="category-title">
+                <!--<li>
+                    <a href="#" class="title">平板电视十大品牌</a>
+                </li>-->
+            </ul>
+        </div>
+    </section>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="register.html" class="w30">登录</a>
+            <a href="login.html" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/brandTitle.js"></script>
+    <!--模板引擎1-->
+    <script type="text" id="tpl1">
+        {{each result as item index}}
+            <li>
+                <a href="brand.html?brandtitleid={{item.brandTitleId}}" class="title">{{item.brandTitle}}</a>
+            </li>
+        {{/each}}
+    </script>
+</body>
+</html>

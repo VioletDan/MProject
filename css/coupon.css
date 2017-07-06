@@ -1,0 +1,31 @@
+.mmb-h {
+  background: #f4483e;
+}
+.foot {
+  padding-top: 0;
+  margin-top: 0.66665rem;
+}
+.coupon-title > ul > li {
+  border: 1px solid #eeeeee;
+  height: 1.99995rem;
+  margin-left: 0.13333rem;
+  margin-top: 0.13333rem;
+  overflow: hidden;
+  padding-top: 0.13333rem;
+  text-align: center;
+  width: 31%;
+  font-size: 12px;
+}
+[data-dpr='2'] .coupon-title > ul > li {
+  font-size: 24px;
+}
+[data-dpr="3"] .coupon-title > ul > li {
+  font-size: 36px;
+}
+.coupon-title > ul > li > a {
+  color: #333;
+}
+.coupon-title > ul > li > a > img {
+  max-height: 1.3333rem;
+  width: 1.3333rem;
+}

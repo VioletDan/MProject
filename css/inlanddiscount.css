@@ -1,0 +1,66 @@
+.inland-discount-list > ul > li {
+  text-align: center;
+  padding: 0.26666rem;
+  border: 1px solid #eeeeee;
+  border-top-width: 0;
+  overflow: hidden;
+}
+.inland-discount-list > ul > li > a {
+  display: block;
+}
+.inland-discount-list > ul > li > a > .img {
+  margin: 0.26666rem auto;
+  width: 3.73324rem;
+  height: 3.73324rem;
+  overflow: hidden;
+  word-break: break-all;
+}
+.inland-discount-list > ul > li > a > .img img {
+  width: 100%;
+}
+.inland-discount-list > ul > li > a > .title {
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  font-weight: bold;
+  word-break: break-all;
+  overflow: hidden;
+  height: 0.959976rem;
+}
+[data-dpr='2'] .inland-discount-list > ul > li > a > .title {
+  font-size: 28px;
+}
+[data-dpr="3"] .inland-discount-list > ul > li > a > .title {
+  font-size: 42px;
+}
+.inland-discount-list > ul > li > a > .subtit {
+  font-size: 14px;
+  color: #ff6c00;
+  text-align: left;
+  height: 0.626651rem;
+  line-height: 0.626651rem;
+  overflow: hidden;
+  margin-top: 0.106664rem;
+}
+[data-dpr='2'] .inland-discount-list > ul > li > a > .subtit {
+  font-size: 28px;
+}
+[data-dpr="3"] .inland-discount-list > ul > li > a > .subtit {
+  font-size: 42px;
+}
+.inland-discount-list > ul > li > a > .info {
+  color: #a1a1a1;
+  text-align: left;
+  font-size: 12px;
+  margin: 0.199995rem 0;
+}
+[data-dpr='2'] .inland-discount-list > ul > li > a > .info {
+  font-size: 24px;
+}
+[data-dpr="3"] .inland-discount-list > ul > li > a > .info {
+  font-size: 36px;
+}
+.foot {
+  padding-top: 0;
+  margin-top: 0.66665rem;
+}

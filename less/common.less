@@ -1,0 +1,237 @@
+@import "px2rem";     // 导入换算 less
+@import "variable";
+@top-color:#f1f1f1;
+//遮罩层
+.mmb-modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0,0,0,.6);
+    left: 0;
+    top: 0;
+    >.pic{
+        >img{
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    >a{
+        display: block;
+        width: 80*@rem;
+        height: 100*@rem;
+        line-height: 100*@rem;
+        text-align: center;
+        border-radius: 10*@rem;
+        border: 5*@rem solid rgba(0,0,0,.4);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .l{
+        background: url(../images/1.gif) no-repeat;
+        background-position: center center;
+        background-size: 80*@rem 80*@rem;
+        left: 20*@rem;
+    }
+    .r{
+        background: url(../images/3.gif) no-repeat;
+        background-position: left center;
+        background-size: 80*@rem 80*@rem;
+        right: 20*@rem;
+    }
+     display: none;
+    >.cannel{
+        width: 50*@rem;
+        height: 50*@rem;
+        background: rgba(0, 0, 0, .6);
+        margin-top: 20*@rem;
+        text-align: center;
+        line-height: 50*@rem;
+        border-radius: 50%;
+        .font-size(18);
+    }
+}
+//比较商品列表
+.row{
+    width: 100%;
+    //height: 500*@rem;
+    border-radius: 10*@rem;
+    background: #ededed;
+    border: 1px solid #ccc;
+    .font-size(14);
+    color: #666;
+    >.category-title li {
+        //height: 78*@rem;
+        line-height: 78*@rem;
+        border: 1px solid #ccc;
+        >a.title{
+            padding: 0 28*@rem 0 32*@rem;
+            display: block;
+            color: #000;
+            .font-size(16);
+            font-weight: bold;
+            position: relative;
+            &:before{
+                content: '';
+                display: block;
+                width: 45*@rem;
+                height: 25*@rem;
+                background: url('../images/icon_bar.png') no-repeat -22*@rem -208*@rem;
+                position: absolute;
+                right: 20*@rem;
+                top: 30*@rem;
+                transform: scale(0.5);
+            }
+        }
+        >.category-content li.w33{
+                float: left;
+                text-align: center;
+                border-right: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                background: #f9f9f9;
+                >a{
+                    display: block;
+                    width: 100%;
+                    color: #333;
+                }
+        }
+    }
+}
+//注册页
+.head{
+    height: 400*@rem;
+    background: url('../images/bj.png') no-repeat;
+    box-sizing: border-box;
+    font-family:Segoe Script;
+    background-position-y: -400*@rem;
+    color: #fff;
+    >.title{
+        height: 90*@rem;
+    }
+    >.back{
+        >a{
+            display:block;
+            >i{
+                width: 49*@rem;
+                height: 66*@rem;
+                background: url('../images/back2.png') no-repeat;
+                vertical-align: middle;
+            }
+            >span{
+                width: 138*@rem;
+                height: 68*@rem;
+                background: url('../images/backback.png') no-repeat;
+            }
+        }
+    }
+    >.txt{
+        margin-top: 50*@rem;
+        .font-size(20);
+        text-align: center;
+    }
+}
+main{
+    >.title{
+        height: 152*@rem;
+        background: url('../images/bg2.png') no-repeat;
+        background-position-x: -110*@rem;
+        font-family: 'Segoe UI Semilight';
+        >.log{
+            text-align: center;
+            height: 152*@rem;
+            line-height: 152*@rem;
+            .font-size(20);
+        }
+        >.sign{
+            color: #3e95a9;
+        }
+        >.sign1{
+            position: relative;
+            &:before{
+                content: '';
+                display: block;
+                width: 0*@rem;
+                height: 0*@rem;
+                position: absolute;
+                top: 132*@rem;
+                left: 133*@rem;
+                //background: #f00;
+                border-bottom: 21*@rem solid white;
+                border-left: 21*@rem solid transparent;
+                border-right: 21*@rem solid transparent;
+            }
+        }
+    }
+    >.title1{
+        background: #deebf2;
+        position: relative;
+    }
+    >.m-body{
+        height: 800*@rem;
+        //background: #f00;
+        padding: 40*@rem 120*@rem;
+        >ul{
+            >li{
+                border-bottom: 2*@rem solid #353535;
+                line-height: 140*@rem;
+                padding-left: 60*@rem;
+                >a{
+                    color: #828282;
+                    .font-size(18);
+                    position: relative;
+                    input{
+                        color: #828282;
+                    }
+                }
+                .email:before{
+                    content: '';
+                    display: block;
+                    width: 49*@rem;
+                    height: 37*@rem;
+                    position: absolute;
+                    top: 5*@rem;
+                    left: -73*@rem;
+                    background: url('../images/email.png') no-repeat;
+                }
+                .pass:before{
+                    content: '';
+                    display: block;
+                    width: 49*@rem;
+                    height: 37*@rem;
+                    position: absolute;
+                    top: 5*@rem;
+                    left: -73*@rem;
+                    background: url('../images/lock.png') no-repeat;
+                }
+            }
+        }
+        >.login{
+            text-align: center;
+            height: 122*@rem;
+            border-radius: 50*@rem;
+            margin-top: 108*@rem;
+            border: 2*@rem solid #8e8e8e;
+            button{
+                width: 100%;
+                height: 118*@rem;
+                border-radius: 50*@rem;
+                background: #f7f7f7;
+                .font-size(20);
+                color: #828282;
+            }
+            
+        }
+        >.fog{
+            text-align: center;
+            margin-top: 30*@rem;
+            .font-size(18);
+        }
+        >.forg{
+            font-family:Segoe Script;
+        }
+    }
+}

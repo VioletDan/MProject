@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/bijia.css">
+    <title>bijia.html</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h">
+        <div class="h-logo f-left">
+            <a href="index.html" title="慢慢买">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="center"></div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--搜索框区域-->
+    <section id="mmb-ser" class="mmb-ser">
+        <div class="mmb-ser-t">
+            <div class="ser-t-f">
+                <input type="text" class="search" placeholder="请输入您想比较的商品">
+            </div>
+            <div class="ser-t-r">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+    <!--比价区域-->
+    <section class="product-bijia" id="product-bijia">
+        <!--头部-->
+        <nav class="product-list-title clearfix">
+            <a href="index.html" class="list-title1">首页</a>
+            >
+            <!--<a href="#" class="list-title2">电视</a>-->
+            <!--<a href="#" class="list-title3">乐视TV(Letv)S50</a>-->
+            <a href="#" class="select f-right">筛选</a>
+        </nav>
+        <!--商品详情-->
+        <div class="product-bijia clearfix">
+            <!--<div class="product-name">
+                乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+            </div>
+            <div class="product-img">
+                <img src="images/Thumb_2016060015515937123.png" alt="乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视" width="170">
+            </div>-->
+            <div class="product-collect">
+                <a href="#">
+                    <img src="images/sc.jpg" width="39" height="39">
+                </a>
+            </div>
+        </div>
+        <!--Tab详情-->
+        <div class="tab">
+            <ul>
+                <li class="cur">
+                    <a href="#">比价购买</a>
+                </li>
+                <li class="mtab">
+                    <a href="#">产品参数</a>
+                </li>
+                <li class="">
+                    <a href="#" class="">评价(2322)</a>
+                </li>
+            </ul>
+        </div>
+        <!--京东比较详情-->
+        <div class="plist">
+            <div class="bijia">
+                <!--<a href="#" ></a>-->
+            </div>
+            <div class="note">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+            </div>                           
+        </div>
+        <!--网友评价标题-->
+        <div class="product-com-title">
+            <div>网友评价</div>
+        </div>
+        <!--网友评价内容区-->
+        <div class="product-com-list">
+            <ul>
+                <li>
+                    <!--<div class="clearfix">
+                        <span class="f-left com-name">
+                            b***r
+                        </span>
+                        <span class="f-right com-time">
+                            2016/10/1
+                        </span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="f-right com-from">
+                            购买自：京东商城
+                        </span>
+                    </div>
+                    <div class="com-content">
+                        使用了一周整体不错，主要是为了看纪录片和足球。
+                        装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！
+                        还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，
+                        应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，
+                        纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！
+                        电视本身有个不足，音响太差，太山寨了！
+                        而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，
+                        必须买光纤音频线
+                    </div>
+                </li>-->
+            </ul>
+            <div class="more">
+                <a class="morein" href="javascript:;">
+                    查看更多评价
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="register.html" class="w30">登录</a>
+            <a href="login.html" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/bijia.js"></script>
+    <!--模板引擎1-->
+    <script type="text" id="tpl1">
+        {{each result as item index}}
+            <a href="productlist.html" class="list-title2">{{item.category}}</a>
+            > 
+        {{/each}}
+    </script>
+    <script type="text" id="tpl2">
+        {{each result as item index}}
+            <a href="#" class="list-title3">{{item.productName}}</a>
+            >
+        {{/each}}
+    </script>
+    <!--商品详情-->
+    <script type="text" id="tpl3">
+        {{each result as item index}}
+            <div class="product-name">
+                {{item.productName}}
+            </div>
+            <div class="product-img">
+                {{#item.productImg}}
+            </div>
+            
+        {{/each}}
+    </script>
+    <!--比较详情-->
+    <script type="text" id="tpl4">
+        {{each result as item index}}
+            <a href="#" >{{#item.bjShop}}</a>
+        {{/each}}
+    </script>      
+    <!--评论-->
+    <script type="text" id="tpl5">
+        {{each result as item index}}
+            <li>
+                <div class="clearfix">
+                    <span class="f-left com-name">
+                        {{item.comName}}
+                    </span>
+                    <span class="f-right com-time">
+                        {{item.comTime}}
+                    </span>
+                </div>
+                <div class="clearfix">
+                    <span class="f-right com-from">
+                        {{item.comFrom}}
+                    </span>
+                </div>
+                <div class="com-content">
+                    {{item.comContent}}
+                </div>
+            </li>
+        {{/each}}
+    </script>  
+</body>
+</html>

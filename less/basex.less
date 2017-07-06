@@ -1,0 +1,488 @@
+@themes: "."; // 路径提取
+@import "@{themes}/px2rem";     // 导入换算 less
+@import "@{themes}/variable";   // 导入变量 less
+
+/*------------- S reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+@charset "utf-8";
+html {
+    background: #fff;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+}
+html, body {
+    background: #ffffff;
+    color: @font-color;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,::before,::after{
+    margin: 0;
+    padding: 0;
+    /*在移动端特殊的设置*/
+}
+input, select, textarea {
+    font-size: 100%
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+fieldset, img {
+    border: 0
+}
+del {
+    text-decoration: line-through
+}
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: 500
+}
+ol, ul {
+    list-style: none
+}
+caption, th {
+    text-align: left
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500
+}
+ins,a{
+    text-decoration: none;
+    color: @font-color;
+}
+a:hover{
+    color: @font-color;
+}
+input,textarea,button{
+    border: none;
+    outline: none;
+    resize: none;
+    /*特殊的属性定义  清除浏览器给input自带的样式*/
+    -webkit-appearance: none;/*组件默认的样式空*/
+}
+/*------------- E  reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+
+
+/*------------- S common css  也就是我们公用的css -------------*/
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}
+.clearfix::after,
+.clearfix::before{
+    content: ".";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.w33 { width: 33.3333%; }
+.w50 { width: 50%; }
+.w25{
+    width: 25%;
+}
+.w75{
+    width: 75%;
+}
+.w30{
+    width: 30%;
+}
+.w40{
+    width: 40%;
+}
+//图片自适应
+img {
+	width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+	//display: block;
+	-ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
+
+}
+//头部样式
+.mmb-h{
+    height: 97*@rem;
+    width: 100%;
+    background-color: @main-color;
+    border-bottom: 1px solid @line-color;
+    padding:21*@rem;
+    position: relative;
+    .h-logo{
+        width: 370*@rem;
+        margin-left: 5*@rem;
+    }
+    .center{
+        margin-left: 370*@rem;
+        margin-right: 68*@rem;
+        width:100%;
+    }
+    .h-app{
+        position: absolute;
+        top: 13*@rem;
+        right: 13*@rem;
+        width: 68*@rem;
+        height: 68*@rem;
+    }
+}
+.mmb-h .back{
+    width: 48*@rem;
+    height:48*@rem;
+    background:url('../images/message.png') no-repeat -175*@rem -376*@rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    .icon-back{
+        display: block; 
+        height:48*@rem; 
+    }
+}
+.mmb-h .center{
+    margin-left: 0;
+    .font-size(20);
+    text-align: center;
+    color: #fff;
+    >h1{
+        font-weight: bold;
+    }
+}
+//搜索框区域
+@top-color:#f1f1f1;
+.mmb-ser{
+    width: 100%;
+    border-top: 1px solid @line-color;
+    .mmb-ser-t{
+        height: 100*@rem;
+        padding: 20*@rem;
+        position: relative;
+       .ser-t-f{
+            margin-right: 140*@rem;
+            .search{
+                width: 100%;
+                height: 60*@rem;
+                background: @top-color;
+                border-radius: 30*@rem;
+                padding-left: 38*@rem;
+                .font-size(13);
+            }
+       }
+       .ser-t-r{
+           position: absolute;
+           top:20*@rem;
+           right: 0; 
+           width: 140*@rem;
+           > button{
+                border-radius: 30*@rem;
+                width: 127*@rem;
+                height: 60*@rem;
+                background: @main-color;
+                color: #fff;
+                .font-size(16);
+           }
+       }
+    }
+    .mmb-ser-b{
+        height: 20*@rem;
+        background: @top-color;
+    }
+}
+
+//nav样式
+.product-list-title{
+    width: 100%;
+    height: 76*@rem;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 76*@rem;
+    padding-left: 16*@rem;
+    padding-right: 13*@rem;
+    >a{
+        color: #000;
+        .font-size(14);
+    }
+    >a.select{
+        width: 125*@rem;
+        height: 58*@rem;
+        display: block;
+        background-color: #d0d0d0;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#d7d7d7), to(#f5f5f5));
+        background: -moz-linear-gradient(top, #d7d7d7, #f5f5f5);
+        background: -o-linear-gradient(top, #d7d7d7, #f5f5f5);
+        border-bottom: 1px solid #bababa;
+        box-shadow: 0 1px 2px #888;
+        border-radius: 10*@rem;
+        text-align: center;
+        line-height: 58*@rem;
+        overflow: hidden;
+        border: none;
+        margin-top: 7*@rem;
+    }
+}
+
+.recommen-product .recommen-product-list{
+    ul li{
+        padding: 18*@rem;
+        border-bottom: 1px solid #e7e7e7;
+        position: relative;
+        >a{
+            display: block;
+           > .pic {
+               width: 175*@rem;
+               margin-right: 20*@rem;
+               img{
+                     width: 100%;
+                }
+           }
+           > .info{
+                width: 100%;
+                .font-size(14);
+                line-height: 48*@rem;
+                padding-left: 194*@rem;
+                > .title{
+                        color: #333333;
+                        line-height: 44*@rem;
+                        min-height: 88*@rem;
+                        word-break: break-all;
+                        padding-left: 15*@rem;
+                        >span{
+                            color: #ff6c00; 
+                        }
+                }
+                > .other{
+                    margin-top: 50*@rem;
+                    >.mall{
+                        display: inline-block;   
+                    }
+                    >.comment{
+                        >.icon-comment{
+                            vertical-align: middle;
+                            display: inline-block;
+                            border-radius: 10*@rem;
+                            width: 47*@rem;
+                            height: 48*@rem;
+                            
+                            background:rgb(255,218,100) url('../images/message.png') no-repeat -65*@rem -166*@rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >.more-bar{
+        background: #f1f1f1;
+        padding-bottom: 18*@rem;
+        > .more-txt{
+            height: 84*@rem;
+            background:#fff;
+            >  a{
+                display: block;
+                text-align: center;
+                line-height: 58*@rem;
+                margin-top: 20*@rem;
+                margin-left: 20*@rem;
+                width: 100%;
+                height: 58*@rem;
+                border: 1px solid #e0e0e0;
+                border-radius: 10*@rem;
+                background-image: linear-gradient(#ffffff, #f4f4f4);
+                color: #000;
+                .font-size(13);
+            }
+        }
+    }
+     >.page{
+            >span{
+                float: left;
+                text-align: center;
+                padding-top: 15*@rem;
+                >a{
+                    display: inline-block;
+                    color: #333;
+                    width: 160*@rem;
+                    box-sizing: border-box;
+                    background-color: #d4d4d4;
+                    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+                    border-bottom: 1px solid #bababa;
+                    box-shadow: 0 0 1px #666;
+                    border-radius: 10*@rem;
+                    text-align: center;
+                    .font-size(14);
+                    height: 70*@rem;
+                    line-height: 70*@rem;
+                    overflow: hidden;
+                }
+                >.selectPage{
+                    text-align: center;
+                    width: 160*@rem;
+                    height: 70*@rem;
+                    >option{
+                        .font-size(12);
+                        font-weight: normal;
+                        display: block;
+                        white-space: pre;
+                        min-height: 1.2em;
+                    }
+                }
+            }
+    }
+}
+//底部小火箭
+#gotop{
+    position: fixed;
+    z-index: 999;
+    bottom: 60*@rem;
+    right: 16*@rem;
+    width: 80*@rem;
+    text-align: center;
+    line-height: 40*@rem;
+    .font-size(30);
+    height: 80*@rem;
+    border-radius: 40*@rem;
+    opacity: 0.5;
+    background-color: #000000;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 44*@rem auto;
+}
+
+//搜索小图标
+.searchbtn{
+    width: 76*@rem;
+    height: 76*@rem;
+    border-left: 1px solid #e6e6e6;
+    background-color: #fbfbfb;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;//显示出搜索框
+    display: -webkit-box;
+    >.icon-search{
+        width: 76*@rem;
+        height: 76*@rem;
+        background-image: url(../images/load.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 44*@rem auto;
+        
+    }
+    } 
+//底部样式
+.foot{
+    width: 100%;
+    height: 243*@rem;
+    background: #f1f1f1;
+    padding-top: 50*@rem;
+    .font-size(12);
+    .foot-t>a{
+        height: 64*@rem;
+        border: 2px solid #c5c5c5;
+        border-left: 0;
+        display: block;
+        float: left;
+        text-align: center;
+        line-height: 64*@rem;
+        color: #000;
+        .font-size(14);
+        &:nth-child(3){
+            border-right: 0;
+            .arrow{
+                position: relative;
+               &:before{
+                   content: '';
+                   display: block;
+                   width: 30*@rem;
+                   height: 30*@rem;
+                   background: url(../images/top.jpg);
+                   position: absolute;
+                   top:0;
+                   left: -30*@rem;
+               } 
+            }
+        }
+    }
+     .foot-b{
+        p{
+            &:nth-child(1){
+                margin-top: 35*@rem;
+            }
+            text-align: center;
+        }
+    }   
+}
+//brand标题
+.brand{
+    .font-size(16);
+    color:#874604;
+    padding-left:20*@rem;
+    line-height: 80*@rem;
+    margin:20*@rem 10*@rem;
+    border:2*@rem solid #ccc; 
+    background-color:#eee;
+}
+//五角星
+.star{
+    display: inline-block;
+    width: 200*@rem;
+    height: 36*@rem;
+    vertical-align: middle;
+    background: url('../images/star.svg') repeat-x;
+    background-size: 40*@rem 36*@rem;
+    margin-right: 20*@rem;
+    vertical-align: middle;
+    // .star5{
+    //     background: url('../images/star.svg') repeat-x;
+    //     background-size: 40*@rem 36*@rem;
+    //     display: inline-block;
+    //     width: 40*@rem;
+    //     height: 36*@rem;
+    //     vertical-align: middle;
+    // }
+}
+
+
+
+
+
+
+
+/*-------------- S 字体图标库 -------------*/
+@font-face {font-family: "miconfont";
+    src: url('../font/miconfont.eot?t=1480476053297'); /* IE9*/
+    src: url('../font/miconfont.eot?t=1480476053297#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/miconfont.woff?t=1480476053297') format('woff'), /* chrome, firefox */
+    url('../font/miconfont.ttf?t=1480476053297') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../font/miconfont.svg?t=1480476053297#miconfont') format('svg'); /* iOS 4.1- */
+}
+.micon {
+    font-family: 'miconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;//-webkit-font-smoothing控制的字体渲染只对MacOS的Webkit有效。
+    -webkit-text-stroke-width:0.2px;//用长度值指定描边厚度
+    -moz-osx-font-smoothing:grayscale;
+}
+.micon-arrow::before{ content:'\e65e';}
+.micon-arrow::before{ content: '\e65f';}
+//  CSS3里面加入了一个“-webkit-font-smoothing”属性。
+// 这个属性可以使页面上的字体抗锯齿,使用后字体看起来会更清晰舒服。
+// 加上之后就顿时感觉页面小清晰了。 淘宝也在用哦！(卖萌)
+// 它有三个属性： 
+// none                                     ------ 对低像素的文本比较好 
+// subpixel-antialiased                ------默认值 
+// antialiased                             ------抗锯齿很好 
+/*------------- E common css  也就是我们公用的css -------------*/

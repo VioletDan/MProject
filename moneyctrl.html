@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+    <title>moneyctrl.html</title>
+</head>
+<body>
+    <!--头部区域-->
+    <header id="mmb-h" class="mmb-h clearfix">
+        <div class="back f-left">
+            <a href="index.html" class="icon-back" title="慢慢买"></a>
+        </div>
+        <div class="center"> 
+            <h1>省钱控 - 最新优惠</h1>
+        </div>
+        <div class="h-app">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--主产品区域-->
+    <main class="recommen-product" id="recommen-product">
+        <div class="recommen-product-list product-list">
+            <ul>
+                <!--<li class="clearfix ui-border-b">
+                    <a href="#">
+                        <div class="pic f-left">
+                            <img src="images/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                移动端凑单品：海天 鲜味 生抽 </br>1.28L
+                                <span>10.9元</span>
+                            </div>
+                            <div class="other">
+                                <span class="mall">京东商城 | 10-25 14:10</span>
+                                <span class="comment f-right">
+                                    <i class="icon-comment"></i>1
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>-->
+            </ul>
+            <div class="clearfix page">
+                <span class="w33">
+                    <a href="javascript:void(0);" class="prePage">
+                        上一页
+                    </a>
+                </span>
+                <span class="w33">
+                    <select name="select" id="selectPage" class="selectPage">
+                        <option value="1" selected="selected">1/3</option>
+                        <option value="2">2/3</option>
+                        <option value="3">3/3</option>
+                    </select>
+                </span>
+                <span class="w33">
+                    <a href="javascript:void(0);" class="nextPage">
+                        下一页
+                    </a>
+                </span>
+            </div>
+        </div>
+
+    </main>
+    <!--底部区域-->
+    <footer id="foot" class="foot">
+        <div class="foot-t clearfix">
+            <a href="register.html" class="w30">登录</a>
+            <a href="login.html" class="w30">注册</a>
+            <a href="#" class="w40 return-top">
+                <span class="arrow">返回顶部</span>
+            </a>
+        </div>
+        <div class="foot-b">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="lib/jquery/jquery-1.12.0.min.js"></script>
+    <script src="lib/art/template.js"></script>
+    <script src="js/moneyctrl.js"></script>
+    <!--模板引擎1-->
+    <script type="text" id="tpl2">
+        {{each result as item index}}
+            <li class="clearfix ui-border-b">
+                    <a href="moneyproduct.html?productid={{item.productId }} ">
+                        <div class="pic f-left">
+                          {{#item.productImgSm}}
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                {{item.productName}}
+                                <span>{{item.productPinkage}}</span>
+                            </div>
+                            <div class="other clearfix">
+                                <span class="mall">{{item.productFrom}} | {{item.productTime}}</span>
+                                <span class="comment f-right">
+                                    <i class="icon-comment"></i>
+                                    <span id=number class=number>{{item.productComCount}}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+        {{/each}}
+    </script>
+</body>
+</html>

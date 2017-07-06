@@ -1,0 +1,138 @@
+@import "px2rem";     // 导入换算 less
+@import "variable";
+@top-color:#f1f1f1;
+.brand{
+    margin: 0;
+    border-left: 0;
+    border-right: 0;
+    .font-size(14);
+    font-weight: bold;
+}
+.foot{
+    padding-top: 0;
+    margin-top: 50*@rem;
+}
+//电视牌子
+.row{
+    >ul{
+        >li{
+            border-bottom: 2*@rem solid #e7e7e7;
+            padding: 20*@rem;
+            background-image: url(../images/arrow-right1.svg);
+            background-repeat: no-repeat;
+            background-size: 40*@rem 40*@rem;
+            background-position: right center;
+            >a{
+                >em{
+                    display: inline-block;
+                    width: 40*@rem;
+                    height: 40*@rem;
+                    text-align: center;
+                    background: #c9c9c9;
+                    color: #FFFFFF;
+                    line-height: 40*@rem;
+                    vertical-align: top;
+                    margin: 0 20*@rem 0 0;
+                    .font-size(14);
+                }
+                >em.top1{
+                    background: #f10e0e;
+                }
+                >em.top2{
+                    background: #ff9314;
+                }
+                >em.top3{
+                    background: #8adf5b;
+                }
+                >.inner{
+                    display: inline-block;//和em同行
+                    >.tit{
+                        color: #000;
+                        .font-size(16);
+                    }
+                    >p{
+                        color: #999;
+                        margin-top: 6*@rem;
+                        .font-size(14);
+                    }
+                }
+            }
+        }
+    }
+}
+.product-com{
+    ul{
+        li{
+            border-bottom: 2*@rem solid #e7e7e7;
+            padding: 20*@rem;
+            &:nth-last-child(1){
+                border-bottom: none;
+            }
+            a{
+                display: block;
+                .protit{
+                    margin-bottom: 20*@rem;
+                    .pic{
+                        margin-right: 20*@rem;
+                        img{
+                            width: 200*@rem;
+                            height: 200*@rem;
+                        }
+                    }
+                    .tit{
+                        color: #999999;
+                        line-height: 44*@rem;
+                        .font-size(14);
+                        word-break: break-all;
+                    }
+                }
+                .plbox{
+                    background: #f8f8f8;
+                    padding: 20*@rem;
+                    border: 2*@rem solid #e7e7e7;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: -16*@rem;
+                        left: 58*@rem;
+                        border-bottom: 16*@rem solid #e7e7e7;
+                        border-right: 16*@rem solid transparent;
+                        border-left: 16*@rem solid transparent;
+                    }
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: -14*@rem;
+                        left: 60*@rem;
+                        border-bottom: 16*@rem solid #f8f8f8;
+                        border-right: 14*@rem solid transparent;
+                        border-left: 14*@rem solid transparent;
+                    }
+                    .name{
+                        color: #000;
+                        .star{
+                            margin-right: 0;
+                            margin-top: -8*@rem;
+                        }
+                        i{
+                            color: #999999;
+                            font-style: normal;
+                        }
+                    }
+                    .con{
+                        .font-size(14);
+                        margin-top: 20*@rem;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
